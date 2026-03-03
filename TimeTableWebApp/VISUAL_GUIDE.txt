@@ -1,0 +1,300 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║                    🎓 TIMETABLE GENERATOR - VISUAL GUIDE 🎓                   ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                                                                               │
+│                          HOW TO OPEN THE APPLICATION                          │
+│                                                                               │
+│   Step 1: Find the file "START_HERE.html" in this folder                    │
+│   Step 2: Double-click it                                                    │
+│   Step 3: Your browser opens automatically                                   │
+│   Step 4: Click "Launch Application"                                         │
+│   Step 5: Start creating timetables!                                         │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                          WHAT YOU'LL SEE - STEP BY STEP                       ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ STEP 1: SETUP CONFIGURATION                                                 │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   ⚙️ Setup Configuration                                                    │
+│   ═══════════════════════════════════════════════════════════════════════   │
+│                                                                             │
+│   📅 Working Days per Week:        [  5  ]                                 │
+│   🕐 Periods per Day:              [  6  ]                                 │
+│   🔄 Max Repetitions per Day:      [  2  ]                                 │
+│   📚 Number of Subjects:           [  4  ]                                 │
+│   👨‍🏫 Number of Teachers:           [  3  ]                                 │
+│   ☕ [✓] Add Break Period                                                   │
+│                                                                             │
+│                    [ Next: Add Subjects → ]                                 │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ STEP 2: ADD SUBJECTS                                                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   📖 Add Subjects                                                           │
+│   ═══════════════════════════════════════════════════════════════════════   │
+│                                                                             │
+│   Subject 1:  [ Mathematics                    ]                           │
+│   Subject 2:  [ Science                        ]                           │
+│   Subject 3:  [ English                        ]                           │
+│   Subject 4:  [ History                        ]                           │
+│                                                                             │
+│         [ Next: Add Teachers → ]    [ ← Back ]                              │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ STEP 3: ADD TEACHERS                                                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   👥 Add Teachers                                                           │
+│   ═══════════════════════════════════════════════════════════════════════   │
+│                                                                             │
+│   Teacher 1:  [ Mr. Smith                      ]                           │
+│   Teacher 2:  [ Ms. Johnson                    ]                           │
+│   Teacher 3:  [ Dr. Brown                      ]                           │
+│                                                                             │
+│         [ Next: Map Subjects → ]    [ ← Back ]                              │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ STEP 4: MAP SUBJECTS TO TEACHERS                                            │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   🔗 Map Subjects to Teachers                                               │
+│   ═══════════════════════════════════════════════════════════════════════   │
+│                                                                             │
+│   📚 Mathematics                                                            │
+│      Teacher: [ Mr. Smith          ▼ ]                                     │
+│                                                                             │
+│   📚 Science                                                                │
+│      Teacher: [ Ms. Johnson        ▼ ]                                     │
+│                                                                             │
+│   📚 English                                                                │
+│      Teacher: [ Dr. Brown          ▼ ]                                     │
+│                                                                             │
+│   📚 History                                                                │
+│      Teacher: [ Mr. Smith          ▼ ]                                     │
+│                                                                             │
+│         [ ✨ Generate Timetable ]    [ ← Back ]                             │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ STEP 5: YOUR BEAUTIFUL TIMETABLE! 🎉                                        │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│   📅 Generated Timetable                                                    │
+│   ═══════════════════════════════════════════════════════════════════════   │
+│                                                                             │
+│   [ 🔄 Regenerate ] [ 📄 Export PDF ] [ 🖨️ Print ] [ 🔁 Start Over ]      │
+│                                                                             │
+│   ┌────────┬────────────┬────────────┬────────────┬────────────┬─────────┐ │
+│   │ Period │   Monday   │  Tuesday   │ Wednesday  │  Thursday  │  Friday │ │
+│   ├────────┼────────────┼────────────┼────────────┼────────────┼─────────┤ │
+│   │   1    │    Math    │  Science   │  English   │  History   │  Math   │ │
+│   │        │ (Mr. Smith)│(Ms. J)     │(Dr. Brown) │(Mr. Smith) │(Mr. S)  │ │
+│   ├────────┼────────────┼────────────┼────────────┼────────────┼─────────┤ │
+│   │   2    │  Science   │  English   │  History   │    Math    │ Science │ │
+│   │        │(Ms. J)     │(Dr. Brown) │(Mr. Smith) │(Mr. Smith) │(Ms. J)  │ │
+│   ├────────┼────────────┼────────────┼────────────┼────────────┼─────────┤ │
+│   │   3    │  English   │  History   │    Math    │  Science   │ English │ │
+│   │        │(Dr. Brown) │(Mr. Smith) │(Mr. Smith) │(Ms. J)     │(Dr. B)  │ │
+│   ├────────┼────────────┼────────────┼────────────┼────────────┼─────────┤ │
+│   │   4    │ ☕ BREAK   │ ☕ BREAK   │ ☕ BREAK   │ ☕ BREAK   │☕ BREAK │ │
+│   ├────────┼────────────┼────────────┼────────────┼────────────┼─────────┤ │
+│   │   5    │  History   │    Math    │  Science   │  English   │ History │ │
+│   │        │(Mr. Smith) │(Mr. Smith) │(Ms. J)     │(Dr. Brown) │(Mr. S)  │ │
+│   ├────────┼────────────┼────────────┼────────────┼────────────┼─────────┤ │
+│   │   6    │    Math    │  Science   │  English   │  History   │ Science │ │
+│   │        │(Mr. Smith) │(Ms. J)     │(Dr. Brown) │(Mr. Smith) │(Ms. J)  │ │
+│   └────────┴────────────┴────────────┴────────────┴────────────┴─────────┘ │
+│                                                                             │
+│   👨‍🏫 Teacher Assignments                                                   │
+│   ───────────────────────────────────────────────────────────────────────   │
+│                                                                             │
+│   ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐       │
+│   │ 👨‍🏫 Mr. Smith     │  │ 👩‍🏫 Ms. Johnson   │  │ 👨‍🏫 Dr. Brown     │       │
+│   │                  │  │                  │  │                  │       │
+│   │ 📚 Mathematics   │  │ 📚 Science       │  │ 📚 English       │       │
+│   │ 📚 History       │  │                  │  │                  │       │
+│   └──────────────────┘  └──────────────────┘  └──────────────────┘       │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                              BUTTON FUNCTIONS                                 ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                                                                               │
+│   🔄 REGENERATE                                                               │
+│   ─────────────────────────────────────────────────────────────────────────   │
+│   Creates a NEW random timetable with the SAME subjects and teachers         │
+│   Use this if you want a different arrangement                               │
+│   Click as many times as you want!                                           │
+│                                                                               │
+│   📄 EXPORT PDF                                                               │
+│   ─────────────────────────────────────────────────────────────────────────   │
+│   Opens print dialog where you can save as PDF                               │
+│   Perfect for sharing or archiving                                           │
+│   Clean, professional format                                                 │
+│                                                                               │
+│   🖨️ PRINT                                                                    │
+│   ─────────────────────────────────────────────────────────────────────────   │
+│   Prints the timetable directly to your printer                              │
+│   Optimized layout for paper                                                 │
+│   Ready to distribute                                                        │
+│                                                                               │
+│   🔁 START OVER                                                               │
+│   ─────────────────────────────────────────────────────────────────────────   │
+│   Clears everything and starts fresh                                         │
+│   Create a completely new timetable                                          │
+│   Asks for confirmation first                                                │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                SMART FEATURES                                 ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                                                                               │
+│   ✅ NO CONSECUTIVE REPETITION                                                │
+│      Same subject won't appear back-to-back                                  │
+│      Example: Math in Period 1, then Science in Period 2 (not Math again)   │
+│                                                                               │
+│   ✅ MAX REPETITIONS ENFORCED                                                 │
+│      Subject appears maximum 2 times per day (or your setting)               │
+│      Ensures variety in daily schedule                                       │
+│                                                                               │
+│   ✅ EVEN DISTRIBUTION                                                        │
+│      All subjects spread evenly across the week                              │
+│      Fair allocation of time to each subject                                 │
+│                                                                               │
+│   ✅ AUTOMATIC BREAKS                                                         │
+│      Break period added in middle of day                                     │
+│      Realistic and practical schedule                                        │
+│                                                                               │
+│   ✅ RANDOM GENERATION                                                        │
+│      Different layout each time you generate                                 │
+│      Find the perfect arrangement for your needs                             │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                  PRO TIPS                                     ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                                                                               │
+│   💡 TIP 1: Use Short Names                                                   │
+│      "Math" instead of "Advanced Mathematics Grade 10"                       │
+│      Keeps the timetable clean and readable                                  │
+│                                                                               │
+│   💡 TIP 2: Regenerate Multiple Times                                         │
+│      Try 3-5 different layouts                                               │
+│      Pick the one that works best for you                                    │
+│                                                                               │
+│   💡 TIP 3: Enable Break Period                                               │
+│      Makes the schedule more realistic                                       │
+│      Students and teachers need breaks!                                      │
+│                                                                               │
+│   💡 TIP 4: Balance Teacher Load                                              │
+│      Distribute subjects evenly among teachers                               │
+│      One teacher can handle multiple subjects                                │
+│                                                                               │
+│   💡 TIP 5: Export Before Closing                                             │
+│      Save your timetable as PDF                                              │
+│      You can always come back and create a new one                           │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                            WORKS ON ALL DEVICES                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                                                                               │
+│   💻 DESKTOP COMPUTER                                                         │
+│      Full features, best experience                                          │
+│      Large screen shows everything perfectly                                 │
+│                                                                               │
+│   💻 LAPTOP                                                                   │
+│      Full features, great experience                                         │
+│      Perfect for on-the-go scheduling                                        │
+│                                                                               │
+│   📱 TABLET (iPad, Android)                                                   │
+│      Touch-friendly interface                                                │
+│      Responsive layout adapts to screen                                      │
+│                                                                               │
+│   📱 SMARTPHONE                                                               │
+│      Mobile-optimized layout                                                 │
+│      All features work perfectly                                             │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                              TROUBLESHOOTING                                  ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                                                                               │
+│   ❓ PROBLEM: File won't open                                                 │
+│   ✅ SOLUTION: Make sure you're double-clicking START_HERE.html              │
+│                Try right-click → Open With → Your Browser                    │
+│                                                                               │
+│   ❓ PROBLEM: Timetable looks unbalanced                                      │
+│   ✅ SOLUTION: Click "Regenerate" button multiple times                      │
+│                Try different arrangements until satisfied                    │
+│                                                                               │
+│   ❓ PROBLEM: Can't go back to previous step                                  │
+│   ✅ SOLUTION: Use the "Back" button at bottom of each page                  │
+│                Or click "Start Over" to begin fresh                          │
+│                                                                               │
+│   ❓ PROBLEM: Print looks wrong                                               │
+│   ✅ SOLUTION: Use "Export PDF" instead of direct print                      │
+│                Check print preview before printing                           │
+│                                                                               │
+│   ❓ PROBLEM: Need to change something                                        │
+│   ✅ SOLUTION: Click "Start Over" and create new timetable                   │
+│                All your settings will be cleared                             │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                 READY TO START?                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                                                                               │
+│                    🎯 JUST 3 SIMPLE STEPS TO BEGIN:                           │
+│                                                                               │
+│                    1️⃣  Find START_HERE.html                                   │
+│                    2️⃣  Double-click it                                        │
+│                    3️⃣  Click "Launch Application"                            │
+│                                                                               │
+│                    That's it! You're ready to create timetables! 🎉          │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
+
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                                                                               ║
+║                         HAPPY SCHEDULING! 📅✨                                ║
+║                                                                               ║
+║                    Professional TimeTable Generator                           ║
+║                         Web Application v1.0                                  ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝

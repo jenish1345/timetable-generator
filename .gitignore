@@ -1,0 +1,12 @@
+# IDE
+.vscode/
+.idea/
+
+# Java compiled files
+*.class
+
+# macOS
+.DS_Store
+
+# Logs
+*.log

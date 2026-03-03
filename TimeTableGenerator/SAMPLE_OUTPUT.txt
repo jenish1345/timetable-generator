@@ -1,0 +1,117 @@
+╔════════════════════════════════════════╗
+║   WELCOME TO TIMETABLE GENERATOR      ║
+╔════════════════════════════════════════╗
+
+========================================
+MAIN MENU
+========================================
+1. Setup and Generate New Timetable
+2. Regenerate Timetable
+3. Export Timetable to File
+4. Exit
+========================================
+Enter your choice: 1
+
+========================================
+TIMETABLE SETUP
+========================================
+Enter number of working days per week (1-7): 5
+Enter number of periods per day (1-12): 6
+Enter max repetitions of same subject per day (1-6): 2
+Enter number of subjects: 4
+
+Enter subject names:
+Subject 1: Mathematics
+Subject 2: Science
+Subject 3: English
+Subject 4: History
+
+Enter number of teachers: 3
+
+Enter teacher names:
+Teacher 1: Mr. Smith
+Teacher 2: Ms. Johnson
+Teacher 3: Dr. Brown
+
+========================================
+MAP SUBJECTS TO TEACHERS
+========================================
+
+Subject: Mathematics
+Available teachers:
+1. Mr. Smith
+2. Ms. Johnson
+3. Dr. Brown
+Select teacher (1-3): 1
+✓ Mathematics assigned to Mr. Smith
+
+Subject: Science
+Available teachers:
+1. Mr. Smith
+2. Ms. Johnson
+3. Dr. Brown
+Select teacher (1-3): 2
+✓ Science assigned to Ms. Johnson
+
+Subject: English
+Available teachers:
+1. Mr. Smith
+2. Ms. Johnson
+3. Dr. Brown
+Select teacher (1-3): 3
+✓ English assigned to Dr. Brown
+
+Subject: History
+Available teachers:
+1. Mr. Smith
+2. Ms. Johnson
+3. Dr. Brown
+Select teacher (1-3): 1
+✓ History assigned to Mr. Smith
+
+✓ Timetable generated successfully!
+
+════════════════════════════════════════════════════════════════════════════════
+GENERATED TIMETABLE
+════════════════════════════════════════════════════════════════════════════════
+Period      │ Monday         │ Tuesday        │ Wednesday      │ Thursday       │ Friday         │
+────────────────────────────────────────────────────────────────────────────────
+Period 1    │ Mathematics    │ Science        │ English        │ History        │ Mathematics    │
+Period 2    │ Science        │ English        │ History        │ Mathematics    │ Science        │
+Period 3    │ English        │ History        │ Mathematics    │ Science        │ English        │
+Period 4    │ BREAK          │ BREAK          │ BREAK          │ BREAK          │ BREAK          │
+Period 5    │ History        │ Mathematics    │ Science        │ English        │ History        │
+Period 6    │ Mathematics    │ Science        │ English        │ History        │ Science        │
+════════════════════════════════════════════════════════════════════════════════
+
+TEACHER ASSIGNMENTS:
+────────────────────────────────────────
+Mr. Smith: Mathematics, History
+Ms. Johnson: Science
+Dr. Brown: English
+────────────────────────────────────────
+
+========================================
+MAIN MENU
+========================================
+1. Setup and Generate New Timetable
+2. Regenerate Timetable
+3. Export Timetable to File
+4. Exit
+========================================
+Enter your choice: 3
+
+Enter filename (without extension): my_timetable
+✓ Timetable exported successfully to my_timetable.txt
+
+========================================
+MAIN MENU
+========================================
+1. Setup and Generate New Timetable
+2. Regenerate Timetable
+3. Export Timetable to File
+4. Exit
+========================================
+Enter your choice: 4
+
+Thank you for using TimeTable Generator!
