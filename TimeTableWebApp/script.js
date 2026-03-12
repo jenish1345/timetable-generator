@@ -18,6 +18,32 @@ function showSection(sectionId) {
         section.classList.remove('active');
     });
     document.getElementById(sectionId).classList.add('active');
+    
+    // Update progress indicator
+    updateProgressIndicator(sectionId);
+}
+
+function updateProgressIndicator(sectionId) {
+    const stepMap = {
+        'setupSection': 1,
+        'subjectsSection': 2,
+        'teachersSection': 3,
+        'mappingSection': 4,
+        'timetableSection': 5
+    };
+    
+    const currentStep = stepMap[sectionId];
+    
+    document.querySelectorAll('.progress-step').forEach((step, index) => {
+        const stepNum = index + 1;
+        step.classList.remove('active', 'completed');
+        
+        if (stepNum < currentStep) {
+            step.classList.add('completed');
+        } else if (stepNum === currentStep) {
+            step.classList.add('active');
+        }
+    });
 }
 
 function goBack(sectionId) {
@@ -36,12 +62,12 @@ function proceedToSubjects() {
     
     // Validate inputs
     if (!config.workingDays || !config.periodsPerDay || !config.maxRepetitions || !numSubjects) {
-        alert('Please fill in all fields!');
+        showNotification('Please fill in all fields!', 'error');
         return;
     }
     
     if (config.maxRepetitions > config.periodsPerDay) {
-        alert('Max repetitions cannot exceed periods per day!');
+        showNotification('Max repetitions cannot exceed periods per day!', 'error');
         return;
     }
     
@@ -60,6 +86,7 @@ function proceedToSubjects() {
     }
     
     showSection('subjectsSection');
+    showNotification('Great! Now add your subjects', 'success');
 }
 
 // Step 2: Proceed to teachers
@@ -71,7 +98,7 @@ function proceedToTeachers() {
     for (let i = 0; i < numSubjects; i++) {
         const subjectName = document.getElementById(`subject${i}`).value.trim();
         if (!subjectName) {
-            alert(`Please enter name for Subject ${i + 1}`);
+            showNotification(`Please enter name for Subject ${i + 1}`, 'error');
             return;
         }
         subjects.push({
@@ -96,6 +123,7 @@ function proceedToTeachers() {
     }
     
     showSection('teachersSection');
+    showNotification('Perfect! Now add your teachers', 'success');
 }
 
 // Step 3: Proceed to mapping
@@ -107,7 +135,7 @@ function proceedToMapping() {
     for (let i = 0; i < numTeachers; i++) {
         const teacherName = document.getElementById(`teacher${i}`).value.trim();
         if (!teacherName) {
-            alert(`Please enter name for Teacher ${i + 1}`);
+            showNotification(`Please enter name for Teacher ${i + 1}`, 'error');
             return;
         }
         teachers.push({
@@ -139,6 +167,7 @@ function proceedToMapping() {
     });
     
     showSection('mappingSection');
+    showNotification('Almost there! Map subjects to teachers', 'success');
 }
 
 // Step 4: Generate timetable
@@ -147,20 +176,23 @@ function generateTimetable() {
     for (let i = 0; i < subjects.length; i++) {
         const teacherIndex = document.getElementById(`mapping${i}`).value;
         if (teacherIndex === '') {
-            alert(`Please assign a teacher to ${subjects[i].name}`);
+            showNotification(`Please assign a teacher to ${subjects[i].name}`, 'error');
             return;
         }
         subjects[i].teacher = teachers[teacherIndex];
         teachers[teacherIndex].subjects.push(subjects[i]);
     }
     
-    // Generate the timetable
-    generateTimetableLogic();
+    // Show loading animation
+    showLoadingAnimation();
     
-    // Display the timetable
-    displayTimetable();
-    
-    showSection('timetableSection');
+    // Generate the timetable after a short delay for effect
+    setTimeout(() => {
+        generateTimetableLogic();
+        displayTimetable();
+        showSection('timetableSection');
+        showNotification('🎉 Timetable generated successfully!', 'success');
+    }, 1500);
 }
 
 // Core timetable generation logic
@@ -304,8 +336,12 @@ function displayTeacherAssignments() {
 
 // Regenerate timetable
 function regenerateTimetable() {
-    generateTimetableLogic();
-    displayTimetable();
+    showLoadingAnimation();
+    setTimeout(() => {
+        generateTimetableLogic();
+        displayTimetable();
+        showNotification('✨ New timetable generated!', 'success');
+    }, 1000);
 }
 
 // Export to PDF (print functionality)
@@ -341,4 +377,68 @@ function shuffleArray(array) {
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     showSection('setupSection');
+    addInputAnimations();
 });
+
+// Add input animations
+function addInputAnimations() {
+    document.addEventListener('focus', function(e) {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') {
+            e.target.parentElement.style.transform = 'scale(1.02)';
+        }
+    }, true);
+    
+    document.addEventListener('blur', function(e) {
+        if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') {
+            e.target.parentElement.style.transform = 'scale(1)';
+        }
+    }, true);
+}
+
+// Show notification
+function showNotification(message, type = 'info') {
+    // Remove existing notification
+    const existing = document.querySelector('.notification');
+    if (existing) {
+        existing.remove();
+    }
+    
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+        <span>${message}</span>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Trigger animation
+    setTimeout(() => notification.classList.add('show'), 10);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
+}
+
+// Show loading animation
+function showLoadingAnimation() {
+    const loading = document.createElement('div');
+    loading.className = 'loading-overlay';
+    loading.innerHTML = `
+        <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Generating your timetable...</p>
+        </div>
+    `;
+    
+    document.body.appendChild(loading);
+    
+    setTimeout(() => loading.classList.add('show'), 10);
+    
+    setTimeout(() => {
+        loading.classList.remove('show');
+        setTimeout(() => loading.remove(), 300);
+    }, 1400);
+}
