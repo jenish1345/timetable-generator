@@ -1,338 +1,399 @@
-# 📅 TimeTable Generator - Complete Package
+# 📅 TimeTable Generator
 
-## 🎉 What You Have
+<div align="center">
 
-Two complete implementations of a professional TimeTable Generator:
+![TimeTable Generator](https://img.shields.io/badge/TimeTable-Generator-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.0.0-green?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/status-active-success?style=for-the-badge)
 
-1. **🌐 Web Application** (Recommended) - Beautiful, modern, browser-based
-2. **☕ Java Application** (Bonus) - Console-based, educational reference
+**A beautiful, interactive web application for generating school/college timetables with smart scheduling algorithms**
+
+[🚀 Live Demo](https://jenish1345.github.io/timetable-generator/) | [📖 Documentation](#documentation) | [🐛 Report Bug](https://github.com/jenish1345/timetable-generator/issues) | [✨ Request Feature](https://github.com/jenish1345/timetable-generator/issues)
+
+![TimeTable Generator Preview](https://via.placeholder.com/800x400/667eea/ffffff?text=TimeTable+Generator+Preview)
+
+</div>
 
 ---
 
-## 🚀 Quick Start (30 Seconds!)
+## 🌟 Features
 
-### For Web Version (Easiest!):
-```
-1. Open: TimeTableWebApp/START_HERE.html
-2. Click: "Launch Application"
-3. Follow the wizard
-4. Done! 🎉
-```
+### 🎨 Beautiful User Interface
+- **Modern Design** - Gradient purple theme with smooth animations
+- **Progress Indicator** - Visual step-by-step progress tracking
+- **Interactive Notifications** - Real-time feedback for user actions
+- **Loading Animations** - Professional loading states
+- **Responsive Design** - Works perfectly on mobile, tablet, and desktop
 
-### For Java Version:
+### 🧠 Smart Scheduling
+- **No Consecutive Repetitions** - Same subject won't appear back-to-back
+- **Even Distribution** - Subjects spread evenly across the week
+- **Configurable Constraints** - Set maximum repetitions per day
+- **Automatic Breaks** - Intelligent break period insertion
+- **Random Generation** - Different layouts each time
+
+### ⚡ User-Friendly
+- **Step-by-Step Wizard** - Easy 5-step process
+- **Input Validation** - Prevents errors with smart validation
+- **Instant Regeneration** - Don't like the layout? Regenerate instantly
+- **Export Options** - Print or save as PDF
+- **Zero Installation** - Just open and use in your browser
+
+---
+
+## 🚀 Quick Start
+
+### Option 1: Use Online (Recommended)
+Simply visit: **[https://jenish1345.github.io/timetable-generator/](https://jenish1345.github.io/timetable-generator/)**
+
+### Option 2: Run Locally
 ```bash
-cd TimeTableGenerator/src
-javac *.java
-java Main
+# Clone the repository
+git clone https://github.com/jenish1345/timetable-generator.git
+
+# Navigate to the web app folder
+cd timetable-generator/TimeTableWebApp
+
+# Open in browser
+open index.html
+# or double-click index.html
 ```
 
 ---
 
-## 📁 Project Structure
+## 📖 How to Use
 
-```
-📦 Root
-├── 🚀 OPEN_ME_FIRST.md          ⭐ START HERE!
-├── 📄 README.md                  (This file)
-├── 📄 WEBSITE_OVERVIEW.md        (Web app overview)
-│
-├── 🌐 TimeTableWebApp/           ⭐ MAIN APPLICATION
-│   ├── START_HERE.html           🎯 Open this first!
-│   ├── index.html                Main web app
-│   ├── styles.css                Beautiful styling
-│   ├── script.js                 Smart algorithm
-│   ├── README.md                 Technical docs
-│   ├── COMPLETE_GUIDE.md         User guide
-│   └── FEATURES_SHOWCASE.md      Visual tour
-│
-└── ☕ TimeTableGenerator/        Java version (bonus)
-    ├── src/
-    │   ├── Main.java             Entry point
-    │   ├── Subject.java          Subject class
-    │   ├── Teacher.java          Teacher class
-    │   └── TimeTable.java        Core logic
-    ├── compile.sh                Compile script
-    ├── run.sh                    Run script
-    ├── README.md                 Documentation
-    ├── QUICKSTART.md             Quick guide
-    ├── PROJECT_OVERVIEW.md       Requirements
-    └── SAMPLE_OUTPUT.txt         Example output
-```
+### Step 1: Setup Configuration
+Configure your basic parameters:
+- **Working Days**: Number of days per week (1-7)
+- **Periods per Day**: Number of class periods (1-12)
+- **Max Repetitions**: Maximum times a subject can appear per day
+- **Number of Subjects**: Total subjects to schedule
+- **Number of Teachers**: Total teachers available
+- **Add Break**: Enable/disable automatic break period
 
----
+### Step 2: Add Subjects
+Enter names for all your subjects:
+- Mathematics
+- Science
+- English
+- History
+- etc.
 
-## 🌟 Features Comparison
+### Step 3: Add Teachers
+Enter names for all your teachers:
+- Mr. Smith
+- Ms. Johnson
+- Dr. Brown
+- etc.
 
-| Feature | Web Version | Java Version |
-|---------|-------------|--------------|
-| **Interface** | Beautiful GUI | Console text |
-| **Ease of Use** | Click buttons | Type commands |
-| **Installation** | None needed | Requires Java |
-| **Device Support** | Any device | Computer only |
-| **Visual Appeal** | ⭐⭐⭐⭐⭐ | ⭐⭐ |
-| **Export** | PDF/Print | Text file |
-| **Sharing** | Send link | Send files |
-| **Learning** | User-focused | Code-focused |
+### Step 4: Map Subjects to Teachers
+Assign each subject to a teacher using the dropdown menus.
 
-**Recommendation: Use Web Version for actual use, Java version for learning!**
+### Step 5: Generate & View
+Click "Generate Timetable" and view your beautiful schedule!
 
----
-
-## ✨ Key Features (Both Versions)
-
-### Smart Scheduling
-✅ Configurable working days (1-7)
-✅ Configurable periods per day (1-12)
-✅ Maximum repetitions per day setting
-✅ No consecutive same subjects
-✅ Even distribution across week
-✅ Automatic break periods
-
-### User-Friendly
-✅ Step-by-step process
-✅ Input validation
-✅ Clear instructions
-✅ Error handling
-✅ Regenerate option
-
-### Professional Output
-✅ Clean table format
-✅ Teacher assignments
-✅ Print/Export ready
-✅ Professional appearance
+**Additional Actions:**
+- 🔄 **Regenerate** - Create a new random arrangement
+- 📄 **Export PDF** - Save as PDF file
+- 🖨️ **Print** - Print directly
+- 🔁 **Start Over** - Create a new timetable from scratch
 
 ---
 
 ## 🎯 Use Cases
 
-### Perfect For:
+Perfect for:
 - 🏫 Schools & Colleges
 - 📚 Training Centers
 - 👨‍🏫 Teachers & Educators
 - 👨‍🎓 Students
 - 📅 Course Planners
 - 🎓 Educational Institutions
-
-### Scenarios:
-- Weekly class schedules
-- Teacher timetables
-- Lab session planning
-- Workshop scheduling
-- Study planning
-- Activity scheduling
+- 📖 Coaching Classes
+- 🏢 Workshop Organizers
 
 ---
 
-## 📖 Documentation
+## 💻 Technology Stack
 
-### Web Application:
-- **START_HERE.html** - Welcome page
-- **COMPLETE_GUIDE.md** - Full user guide
-- **README.md** - Technical documentation
-- **FEATURES_SHOWCASE.md** - Visual tour
-- **WEBSITE_OVERVIEW.md** - Quick overview
+<div align="center">
 
-### Java Application:
-- **README.md** - Complete documentation
-- **QUICKSTART.md** - Quick start guide
-- **PROJECT_OVERVIEW.md** - Requirements checklist
-- **SAMPLE_OUTPUT.txt** - Example output
+| Technology | Purpose |
+|------------|---------|
+| ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) | Structure |
+| ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) | Styling & Animations |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | Logic & Interactivity |
+| ![Font Awesome](https://img.shields.io/badge/Font_Awesome-339AF0?style=flat&logo=fontawesome&logoColor=white) | Icons |
 
----
+</div>
 
-## 🚀 Getting Started
-
-### Recommended Path:
-1. Read: `🚀 OPEN_ME_FIRST.md`
-2. Open: `TimeTableWebApp/START_HERE.html`
-3. Use: Follow the wizard
-4. Enjoy: Your perfect timetable!
-
-### For Developers:
-1. Study: Java version code
-2. Understand: Algorithm implementation
-3. Customize: Modify as needed
-4. Extend: Add new features
+**Key Features:**
+- ✅ Pure Vanilla JavaScript (No frameworks)
+- ✅ CSS Grid & Flexbox for layouts
+- ✅ CSS Animations for smooth transitions
+- ✅ Responsive design with media queries
+- ✅ No backend required
+- ✅ Works offline after first load
 
 ---
 
-## 💻 Technical Details
+## 🎨 Screenshots
 
-### Web Version:
-- **HTML5** - Structure
-- **CSS3** - Styling (Grid, Flexbox, Animations)
-- **JavaScript (ES6+)** - Logic
-- **Font Awesome** - Icons
-- **No dependencies** - Pure vanilla code
-
-### Java Version:
-- **Java 8+** - Compatible
-- **OOP Design** - Classes and objects
-- **ArrayList** - Dynamic collections
-- **Random** - Randomization
-- **File I/O** - Export functionality
-
----
-
-## 🎨 Screenshots (Web Version)
+<details>
+<summary>Click to view screenshots</summary>
 
 ### Welcome Screen
-```
-╔════════════════════════════════════════╗
-║              📅                        ║
-║     TimeTable Generator                ║
-║  Professional Scheduling System        ║
-║                                        ║
-║    [🚀 Launch Application]            ║
-╚════════════════════════════════════════╝
-```
+![Welcome Screen](https://via.placeholder.com/600x400/667eea/ffffff?text=Welcome+Screen)
+
+### Setup Configuration
+![Setup](https://via.placeholder.com/600x400/667eea/ffffff?text=Setup+Configuration)
 
 ### Generated Timetable
+![Timetable](https://via.placeholder.com/600x400/667eea/ffffff?text=Generated+Timetable)
+
+### Mobile View
+![Mobile](https://via.placeholder.com/300x600/667eea/ffffff?text=Mobile+View)
+
+</details>
+
+---
+
+## 📂 Project Structure
+
 ```
-┌──────────┬──────────────┬──────────────┬──────────────┐
-│ Period   │ Monday       │ Tuesday      │ Wednesday    │
-├──────────┼──────────────┼──────────────┼──────────────┤
-│ Period 1 │ Mathematics  │ Science      │ English      │
-│          │ (Mr. Smith)  │ (Ms. Johnson)│ (Dr. Brown)  │
-├──────────┼──────────────┼──────────────┼──────────────┤
-│ Period 2 │ Science      │ English      │ History      │
-│          │ (Ms. Johnson)│ (Dr. Brown)  │ (Mr. Smith)  │
-└──────────┴──────────────┴──────────────┴──────────────┘
+timetable-generator/
+├── TimeTableWebApp/          # Main web application
+│   ├── index.html            # Main application page
+│   ├── START_HERE.html       # Welcome/landing page
+│   ├── styles.css            # All styling and animations
+│   ├── script.js             # Application logic
+│   ├── README.md             # Web app documentation
+│   ├── COMPLETE_GUIDE.md     # Comprehensive user guide
+│   ├── FEATURES_SHOWCASE.md  # Feature descriptions
+│   └── VISUAL_GUIDE.txt      # Visual walkthrough
+│
+├── TimeTableGenerator/       # Java console version (bonus)
+│   ├── src/                  # Java source files
+│   │   ├── Main.java
+│   │   ├── Subject.java
+│   │   ├── Teacher.java
+│   │   └── TimeTable.java
+│   └── README.md             # Java version docs
+│
+├── README.md                 # This file
+├── LICENSE                   # MIT License
+└── .gitignore               # Git ignore rules
 ```
 
 ---
 
-## 🎓 Learning Objectives
+## 🔧 Configuration Options
 
-### From Web Version:
-- Modern web development
-- Responsive design
-- User experience (UX)
-- JavaScript algorithms
-- CSS animations
+### Basic Settings
+| Parameter | Range | Default | Description |
+|-----------|-------|---------|-------------|
+| Working Days | 1-7 | 5 | Number of days per week |
+| Periods per Day | 1-12 | 6 | Number of class periods |
+| Max Repetitions | 1-12 | 2 | Max times subject appears per day |
+| Subjects | 1-20 | 4 | Total number of subjects |
+| Teachers | 1-50 | 3 | Total number of teachers |
 
-### From Java Version:
-- Object-oriented programming
-- Algorithm design
-- Data structures
-- File handling
-- Console applications
-
----
-
-## 🔧 Customization
-
-### Web Version:
-- Edit colors in `styles.css`
-- Modify algorithm in `script.js`
-- Change layout in `index.html`
-- Add features easily
-
-### Java Version:
-- Extend classes
-- Add new constraints
-- Modify generation logic
-- Implement new features
+### Advanced Features
+- ✅ Automatic break period insertion
+- ✅ Consecutive repetition prevention
+- ✅ Even subject distribution
+- ✅ Random generation algorithm
+- ✅ Teacher-subject mapping
 
 ---
 
-## 📱 Device Compatibility
+## 🎓 Algorithm Details
 
-### Web Version:
-✅ Windows PC
-✅ Mac
-✅ Linux
-✅ iPhone/iPad
-✅ Android
-✅ Any modern browser
+### Scheduling Algorithm
+The timetable generator uses a smart constraint-based algorithm:
 
-### Java Version:
-✅ Windows (with Java)
-✅ Mac (with Java)
-✅ Linux (with Java)
-❌ Mobile devices
+1. **Subject Pool Creation**
+   - Calculates even distribution based on total slots
+   - Creates a pool of subjects to be scheduled
 
----
+2. **Constraint Checking**
+   - Validates maximum repetitions per day
+   - Prevents consecutive same subjects
+   - Ensures break period placement
 
-## 🎉 What Makes This Special
+3. **Random Distribution**
+   - Shuffles subject pool for randomness
+   - Fills timetable while respecting constraints
+   - Handles edge cases gracefully
 
-### Complete Package:
-✅ Two full implementations
-✅ Comprehensive documentation
-✅ Ready to use immediately
-✅ No setup required (web)
-✅ Professional quality
-✅ Educational value
-
-### Production Ready:
-✅ Tested and working
-✅ Clean code
-✅ Well documented
-✅ User-friendly
-✅ Professional output
-✅ Extensible design
+4. **Optimization**
+   - Even distribution across the week
+   - Fair allocation to all subjects
+   - Realistic scheduling patterns
 
 ---
 
-## 🚀 Next Steps
+## 🌐 Browser Support
 
-### To Use:
-1. Open `TimeTableWebApp/START_HERE.html`
-2. Create your timetable
-3. Export/Print
-4. Share with others
+| Browser | Version | Status |
+|---------|---------|--------|
+| Chrome | Latest | ✅ Fully Supported |
+| Firefox | Latest | ✅ Fully Supported |
+| Safari | Latest | ✅ Fully Supported |
+| Edge | Latest | ✅ Fully Supported |
+| Opera | Latest | ✅ Fully Supported |
 
-### To Learn:
-1. Study Java code
-2. Understand algorithm
-3. Modify and experiment
-4. Build your own features
-
-### To Share:
-1. Zip the folders
-2. Send to anyone
-3. They open and use
-4. No installation needed!
+**Requirements:**
+- Modern browser with JavaScript enabled
+- No plugins or extensions needed
+- Works offline after first load
 
 ---
 
-## 📞 Quick Reference
+## 📱 Responsive Design
 
-| Need | File to Open |
-|------|-------------|
-| Use web app | `TimeTableWebApp/START_HERE.html` |
-| User guide | `TimeTableWebApp/COMPLETE_GUIDE.md` |
-| Visual tour | `TimeTableWebApp/FEATURES_SHOWCASE.md` |
-| Run Java | `TimeTableGenerator/src/Main.java` |
-| Java guide | `TimeTableGenerator/QUICKSTART.md` |
-| Overview | `🚀 OPEN_ME_FIRST.md` |
+The application is fully responsive and works on:
+- 📱 Mobile phones (320px+)
+- 📱 Tablets (768px+)
+- 💻 Laptops (1024px+)
+- 🖥️ Desktops (1200px+)
 
 ---
 
-## 🌟 Final Words
+## 🤝 Contributing
 
-You have a **complete, professional, production-ready** timetable generation system with:
+Contributions are welcome! Here's how you can help:
 
-- ✨ Beautiful web interface
-- 🧠 Smart scheduling algorithm
-- 📱 Works on any device
-- 🖨️ Print/Export ready
-- 📚 Full documentation
-- ☕ Java version for learning
-- 🎓 Educational value
-- 🚀 Ready to use NOW!
+1. **Fork the Project**
+2. **Create your Feature Branch**
+   ```bash
+   git checkout -b feature/AmazingFeature
+   ```
+3. **Commit your Changes**
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+   ```
+4. **Push to the Branch**
+   ```bash
+   git push origin feature/AmazingFeature
+   ```
+5. **Open a Pull Request**
+
+### Contribution Ideas
+- 🎨 UI/UX improvements
+- 🐛 Bug fixes
+- 📝 Documentation updates
+- ✨ New features
+- 🌍 Translations
+- ♿ Accessibility improvements
 
 ---
 
-## 🎯 TL;DR
+## 🐛 Known Issues
 
-**Just open `TimeTableWebApp/START_HERE.html` and start creating timetables!**
-
-No installation. No coding. No complexity. Just works! 🎉
+Currently, there are no known issues. If you find a bug, please [report it](https://github.com/jenish1345/timetable-generator/issues).
 
 ---
 
-**Happy Scheduling! 📅✨**
+## 🗺️ Roadmap
 
-*Professional TimeTable Generator - Complete Package*
-*Web + Java Versions Included*
+### Version 1.1 (Planned)
+- [ ] Multiple class sections support
+- [ ] Room/venue allocation
+- [ ] Teacher availability windows
+- [ ] Subject prerequisites
+- [ ] Dark mode theme
+
+### Version 2.0 (Future)
+- [ ] Save/load timetables
+- [ ] User accounts
+- [ ] Cloud sync
+- [ ] Excel export
+- [ ] Email sharing
+- [ ] Mobile app version
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+```
+MIT License
+
+Copyright (c) 2026 Antony Jenish
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 👨‍💻 Author
+
+**Antony Jenish**
+- GitHub: [@jenish1345](https://github.com/jenish1345)
+- Project: [TimeTable Generator](https://github.com/jenish1345/timetable-generator)
+
+---
+
+## 🙏 Acknowledgments
+
+- Font Awesome for the beautiful icons
+- Inspiration from various scheduling systems
+- The open-source community
+
+---
+
+## 📞 Support
+
+If you have any questions or need help:
+
+- 🐛 Issues: [GitHub Issues](https://github.com/jenish1345/timetable-generator/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/jenish1345/timetable-generator/discussions)
+- ⭐ Star the project if you find it helpful!
+
+---
+
+## ⭐ Show Your Support
+
+If you found this project helpful, please give it a ⭐ on GitHub!
+
+[![Star on GitHub](https://img.shields.io/github/stars/jenish1345/timetable-generator?style=social)](https://github.com/jenish1345/timetable-generator)
+
+---
+
+## 📊 Project Stats
+
+![GitHub repo size](https://img.shields.io/github/repo-size/jenish1345/timetable-generator)
+![GitHub code size](https://img.shields.io/github/languages/code-size/jenish1345/timetable-generator)
+![GitHub last commit](https://img.shields.io/github/last-commit/jenish1345/timetable-generator)
+![GitHub issues](https://img.shields.io/github/issues/jenish1345/timetable-generator)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/jenish1345/timetable-generator)
+
+---
+
+<div align="center">
+
+**Made with ❤️ by Antony Jenish**
+
+**[⬆ Back to Top](#-timetable-generator)**
+
+</div>
