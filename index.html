@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeTable Generator - Professional Scheduling System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Progress Indicator -->
+        <div class="progress-indicator">
+            <div class="progress-step active" data-step="1">
+                <div class="step-circle">1</div>
+                <div class="step-label">Setup</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="2">
+                <div class="step-circle">2</div>
+                <div class="step-label">Subjects</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="3">
+                <div class="step-circle">3</div>
+                <div class="step-label">Teachers</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="4">
+                <div class="step-circle">4</div>
+                <div class="step-label">Mapping</div>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" data-step="5">
+                <div class="step-circle">5</div>
+                <div class="step-label">Timetable</div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <i class="fas fa-calendar-alt"></i>
+                <h1>TimeTable Generator</h1>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Setup Section -->
+            <section id="setupSection" class="section active">
+                <div class="section-header">
+                    <h2><i class="fas fa-cog"></i> Setup Configuration</h2>
+                </div>
+
+                <div class="form-grid">
+                    <!-- Basic Settings -->
+                    <div class="form-group">
+                        <label for="workingDays">
+                            <i class="fas fa-calendar-week"></i> Working Days per Week
+                        </label>
+                        <input type="number" id="workingDays" min="1" max="7" value="5" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="periodsPerDay">
+                            <i class="fas fa-clock"></i> Periods per Day
+                        </label>
+                        <input type="number" id="periodsPerDay" min="1" max="12" value="6" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="maxRepetitions">
+                            <i class="fas fa-redo"></i> Max Repetitions per Day
+                        </label>
+                        <input type="number" id="maxRepetitions" min="1" max="12" value="2" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numSubjects">
+                            <i class="fas fa-book"></i> Number of Subjects
+                        </label>
+                        <input type="number" id="numSubjects" min="1" max="20" value="4" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numTeachers">
+                            <i class="fas fa-chalkboard-teacher"></i> Number of Teachers
+                        </label>
+                        <input type="number" id="numTeachers" min="1" max="50" value="3" required>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="addBreak" checked>
+                            <span><i class="fas fa-coffee"></i> Add Break Period</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="proceedToSubjects()">
+                    <i class="fas fa-arrow-right"></i> Next: Add Subjects
+                </button>
+            </section>
+
+            <!-- Subjects Section -->
+            <section id="subjectsSection" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-book-open"></i> Add Subjects</h2>
+                </div>
+
+                <div id="subjectsContainer" class="input-list"></div>
+
+                <button class="btn btn-primary" onclick="proceedToTeachers()">
+                    <i class="fas fa-arrow-right"></i> Next: Add Teachers
+                </button>
+                <button class="btn btn-secondary" onclick="goBack('setupSection')">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+            </section>
+
+            <!-- Teachers Section -->
+            <section id="teachersSection" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> Add Teachers</h2>
+                </div>
+
+                <div id="teachersContainer" class="input-list"></div>
+
+                <button class="btn btn-primary" onclick="proceedToMapping()">
+                    <i class="fas fa-arrow-right"></i> Next: Map Subjects
+                </button>
+                <button class="btn btn-secondary" onclick="goBack('subjectsSection')">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+            </section>
+
+            <!-- Mapping Section -->
+            <section id="mappingSection" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-link"></i> Map Subjects to Teachers</h2>
+                </div>
+
+                <div id="mappingContainer" class="mapping-list"></div>
+
+                <button class="btn btn-success" onclick="generateTimetable()">
+                    <i class="fas fa-magic"></i> Generate Timetable
+                </button>
+                <button class="btn btn-secondary" onclick="goBack('teachersSection')">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+            </section>
+
+            <!-- Timetable Display Section -->
+            <section id="timetableSection" class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-table"></i> Generated Timetable</h2>
+                    <div class="action-buttons">
+                        <button class="btn btn-info" onclick="regenerateTimetable()">
+                            <i class="fas fa-sync-alt"></i> Regenerate
+                        </button>
+                        <button class="btn btn-success" onclick="exportToPDF()">
+                            <i class="fas fa-file-pdf"></i> Export PDF
+                        </button>
+                        <button class="btn btn-warning" onclick="printTimetable()">
+                            <i class="fas fa-print"></i> Print
+                        </button>
+                        <button class="btn btn-secondary" onclick="startOver()">
+                            <i class="fas fa-redo"></i> Start Over
+                        </button>
+                    </div>
+                </div>
+
+                <div id="timetableDisplay" class="timetable-container"></div>
+
+                <div id="teacherAssignments" class="teacher-assignments"></div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 TimeTable Generator</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
